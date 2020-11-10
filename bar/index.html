@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <head>
+    <title>My quiz</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      .question-referenceValues {
+        color: red;
+        stroke: red;
+      }
+      
+      .question-referenceValues.referenceLine.line-myLine {
+        fill: deeppink;
+        stroke: deeppink;
+      }
+    </style>
+  </head>
+
+  <body>
+      <script src="../lib/d3.v5.min.js"></script>
+    <script src="../lib/youdrawit.min.js"></script>   
+    <script>
+      var questions = [];
+      var question = {};
+     
+      var globals = { 
+        default: "en",
+        // header: "Enjoy this quiz",
+        // subHeader: "Try to guess to right answer and see how good you are!",
+        // drawAreaTitle: "Your\nguess",
+        // drawLine: "drag the line\nfrom here to the end",
+        // drawBar: "drag the bar\nto the estimated height",        
+        // resultButtonText: "Show me the result!", 
+        // resultButtonTooltip: "Draw your guess. Upon clicking here, you see if you're right.",
+        // scoreButtonText: "Show me how good I am!",
+        // scoreButtonTooltip: "Click here to see your result",
+        // scoreTitle: "Your result:",
+        // scoreHtml: "Next time you can do better!",
+        // or scoreHtml: [{lower: 0, upper: 50, html: "<b>That wasn't much, was it??</b>"}, {lower: 50, upper: 101, html: "<b>Excellent!!</b>"}],
+      };
+           
+     // ----- for additional questions, copy FROM here
+      question = {
+        data: 11,
+        heading: "Question - left handers",
+        subHeading: "What is the percentage of people who are left handed?",
+        // resultHtml: "The data tell the truth.",
+        unit: "%",
+        // precision: 0,
+        // lastPointShownAt: ,
+        // yAxisMin: ,
+        yAxisMax: 100, 
+        referenceValues: [
+          {text: "12% right-handers (Europe)", value: 12},
+          {text: "12,5% right-handers (US)", value: 12.5},
+          {text: "13% right-handers (Asia)", value: 13},
+        ], 
+        referenceShape: "tick",
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here 
+
+     
+
+      var myChart = youdrawit
+        .chart()
+        .globals(globals)
+        .questions(questions);
+
+      d3.select("body")
+        .append("div")
+        .attr("class", "chart")
+        .call(myChart);
+    </script>
+  </body>
+</html>

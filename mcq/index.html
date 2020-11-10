@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <head>
+    <title>My quiz</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,minimum-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <script src="../lib/d3.v5.min.js"></script>
+    <script src="../lib/youdrawit.min.js"></script>    
+    <script>
+      var questions = [];
+      var question = {};
+     
+      var globals = { 
+        default: "en",
+        // header: "Enjoy this quiz",
+        // subHeader: "Try to guess to right answer and see how good you are!",
+        // drawAreaTitle: "Your\nguess",
+        // drawLine: "drag the line\nfrom here to the end",
+        // drawBar: "drag the bar\nto the estimated height",        
+        // resultButtonText: "Show me the result!", 
+        // resultButtonTooltip: "Draw your guess. Upon clicking here, you see if you're right.",
+        // scoreButtonText: "Show me how good I am!",
+        // scoreButtonTooltip: "Click here to see your result",
+        // scoreTitle: "Your result:",
+        // scoreHtml: "Next time you can do better!",
+        // or scoreHtml: [{lower: 0, upper: 50, html: "<b>That wasn't much, was it??</b>"}, {lower: 50, upper: 101, html: "<b>Excellent!!</b>"}],
+      };
+    // ----- for additional questions, copy FROM here
+    question = {
+      data: [
+          {"San Francisco": false}, 
+          {"Boston": false}, 
+          {"New York": false}, 
+          {"Paris": true},  
+          ],
+        heading: "Where did the OpenVis Conf 2018 take place? ",
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here
+
+           
+     // ----- for additional questions, copy FROM here
+      question = {
+      data: [
+          {"Mike Bostock": false}, 
+          {"Jim Vallandingham": true}, 
+          {"Amanda Cox": false}, 
+          ],
+        heading: "Who presented the animated bubble charts as part of the talk 'Using and abusing the Force' at the OpenVis Conf 2013?",
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here 
+
+
+      var myChart = youdrawit
+        .chart()
+        .globals(globals)
+        .questions(questions);
+
+      d3.select("body")
+        .append("div")
+        .attr("class", "chart")
+        .call(myChart);
+    </script>
+  </body>
+</html>
