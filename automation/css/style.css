@@ -221,7 +221,7 @@ p {
 }
 a {
   text-decoration: none;
-  color: #00345e;
+  color: #21222b;
 }
 a:hover {
   text-decoration: underline;
@@ -247,7 +247,7 @@ ul {
   margin-right: auto;
 }
 #header {
-  background: #00345e;
+  background: #21222b;
   overflow: hidden;
   padding-top: 25px;
   color: #fff;
@@ -273,10 +273,10 @@ ul {
 }
 #header .servicenavi li:hover {
   background: #fff;
-  color: #00345e;
+  color: #21222b;
 }
 #header .servicenavi li:hover .icon:before {
-  color: #00345e;
+  color: #21222b;
 }
 #header .servicenavi li a {
   padding: 5px;
@@ -309,7 +309,7 @@ ul {
   cursor: pointer;
 }
 #header .searchBox form button:before {
-  color: #00345e;
+  color: #21222b;
   margin-top: -24px;
   margin-left: -30px;
   font-size: 30px;
@@ -337,7 +337,7 @@ ul {
   margin-top: -2px;
   margin-left: -44px;
   background: #fff;
-  color: #00345e;
+  color: #21222b;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid transparent;
@@ -367,7 +367,7 @@ ul {
 }
 #header .naviCont a.active, #header .naviCont a:hover {
   background: #fff;
-  color: #00345e;
+  color: #21222b;
 }
 #header .naviCont li {
   display: inline-block;
@@ -479,21 +479,21 @@ ul {
 }
 
 .you-draw-it #gradient-blue .start {
-  stop-color: #00345e;
+  stop-color: #21222b;
   stop-opacity: .3;
 }
 .you-draw-it #gradient-blue .end {
-  stop-color: #00345e;
+  stop-color: #21222b;
   stop-opacity: 0;
 }
 .line.blue {
-  stroke: #00345e;
+  stroke: #21222b;
 }
 .you-draw-it .labels .data-label.blue span {
-  background-color: #00345e;
+  background-color: #21222b;
 }
 .you-draw-it .labels .data-label.blue:after {
-  border-top-color: #00345e;
+  border-top-color: #21222b;
 }
 
 .you-draw-it .axis {
@@ -712,7 +712,7 @@ ul {
 }
 
 .you-draw-it .truth rect {
-  fill: #00345e;
+  fill: #21222b;
 }
 
 .you-draw-it .preview-pointer{
@@ -835,7 +835,7 @@ ul {
 /* When the checkbox is checked, add a blue background */
 /* .answer-container input:checked ~ .answer-checkmark-truth { 
 .answer-container .answer-checkmark-truth.checked {
-  background-color: #00345e;
+  background-color: #21222b;
 }
 */
 
@@ -904,10 +904,10 @@ ul {
   margin-left: -20px;
 }
 .breadcrumb ul li:before {
-  color: #00345e;
+  color: #21222b;
 }
 footer {
-  background-color: #00345e;
+  background-color: #21222b;
   padding: 0 15px;
   overflow: hidden;
   color: #fff;
@@ -1021,7 +1021,7 @@ body {
   */
   padding: 10px 15px;
   border: none;
-  background: #00345e;
+  background: #21222b;
   color: #fff;
   font-size: 20px;
   cursor: pointer;
