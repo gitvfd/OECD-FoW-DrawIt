@@ -457,7 +457,7 @@ ul {
   display: block;
 }
 }.you-draw-it {
-  margin: 5px 0 5px 0;
+  margin: 0px 0 0px 0;
   position: relative;
   overflow: hidden;
 }
@@ -990,7 +990,7 @@ body {
   text-align: center;
 }
 .question h2 {
-  font-size: 24px;
+  font-size: 22px;
 }
 .question .accessibility {
   margin: 20px 0 10px 0;
@@ -998,8 +998,8 @@ body {
 }
 .question .result {
   position: relative;
-  margin-top: 5px;
-  margin-bottom: 5px; 
+  margin-top: 0px;
+  margin-bottom: 0px; 
   /*
   margin-top: 0px;
   margin-bottom: 50px; */
@@ -1059,7 +1059,7 @@ body {
 }
 .question .result .text {
   max-width: 850px;
-  margin: 10px auto;
+  margin: 0px auto;
   visibility: hidden;
   text-align: left;
   font-size: 18px;
@@ -1144,7 +1144,16 @@ body {
 }
 }@media (max-width:760px) {
   .you-draw-it {
-  margin: 0 -30px;
-}
+    margin: 0 -30px;
+  }
 
+  .question .result .text {
+    font-size: 15px;
+  }
+  .question h2 {
+    font-size: 18px;
+  }
+  .question h3 {
+    font-size: 18px;
+  }
 }
