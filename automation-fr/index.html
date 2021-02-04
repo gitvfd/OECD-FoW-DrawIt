@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <meta charset="utf-8">
+
+  <head>
+    <title>My quiz</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,minimum-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .question-referenceValues {
+        color: red;
+        stroke: red;
+      }
+      
+      .question-referenceValues.referenceLine.line-myLine {
+        fill: deeppink;
+        stroke: deeppink;
+      }
+    </style>
+  </head>
+
+  <body>
+      <script src="lib/d3.v5.min.js"></script>
+    <script src="lib/youdrawit.min.js"></script>   
+    <script>
+      var questions = [];
+      var question = {};
+     
+      var globals = { 
+        default: "en",
+        // header: "Enjoy this quiz",
+        // subHeader: "Try to guess to right answer and see how good you are!",
+        // drawAreaTitle: "Your\nguess",
+        // drawLine: "drag the line\nfrom here to the end",
+        // drawBar: "drag the bar\nto the estimated height",        
+        // resultButtonText: "Show me the result!", 
+        resultButtonTooltip: "Draw your guess. Upon clicking here, you see if you're right.",
+        //scoreButtonText: "Show me how good I am!",
+        // scoreButtonTooltip: "Click here to see your result",
+        // scoreTitle: "Your result:",
+        // scoreHtml: "Next time you can do better!",
+        // or scoreHtml: [{lower: 0, upper: 50, html: "<b>That wasn't much, was it??</b>"}, {lower: 50, upper: 101, html: "<b>Excellent!!</b>"}],
+        showScore: false
+      };
+           
+     // ----- for additional questions, copy FROM here
+      question = {
+        data: 46,
+        heading: "What % of jobs are at risks of being fully or partially automated in OECD countries?",
+        //subHeading: "",
+        resultHtml: "  Nearly <b>14%</b> are likely to be automated, while another <b>32%</b> are at high risk of being partially automated.<br/><br/><i>What does this mean for you?</i> If you plan to work in manufacturing or agriculture and do not have a college degree, the risk that your job will be automated is much higher than if you work in education, health or social work and you do have a college degree. Some services jobs are also at risk of automation.",
+        unit: "%",
+        // precision: 0,
+        // lastPointShownAt: ,
+        // yAxisMin: ,
+        yAxisMax: 100, 
+        referenceValues: [
+          //{text: "12% right-handers (Europe)", value: 12},
+          //{text: "12,5% right-handers (US)", value: 12.5},
+          //{text: "13% right-handers (Asia)", value: 13},
+        ], 
+        referenceShape: "tick",
+      };
+      questions.push(question);
+      // ----- for additional questions, copy TO here 
+
+     
+
+      var myChart = youdrawit
+        .chart()
+        .globals(globals)
+        .questions(questions);
+
+      d3.select("body")
+        .append("div")
+        .attr("class", "chart")
+        .call(myChart);
+    </script>
+  </body>
+</html>
